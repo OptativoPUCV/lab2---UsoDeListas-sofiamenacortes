@@ -63,6 +63,7 @@ int sumaLista(List *L) {
   for(int i = 0; i < get_size(lista); i++)
     {
       int *dato = (int*)first(lista);
+      *dato = i;
       suma += *dato;
       pushBack(lista, dato);
     }
