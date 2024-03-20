@@ -21,3 +21,9 @@ Wed 20 Mar 2024 08:37:57 PM UTC:
  1 file changed, 3 insertions(+), 5 deletions(-)
  tests:  0|0
 df6f1c3
+Wed 20 Mar 2024 08:43:22 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  2|3
+total_score: 20/70
+bb4b4f6
