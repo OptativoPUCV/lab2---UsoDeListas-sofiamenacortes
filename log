@@ -214,3 +214,64 @@ Sat 23 Mar 2024 01:31:52 PM UTC:
  tests:  4|1
 total_score: 50/70
 7d1102b
+Sat 23 Mar 2024 01:32:35 PM UTC: 
+ exercises.c | 37 +++++++++++++++++++++++++++++++++++--
+ 1 file changed, 35 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘cadena_balanceada’:
+exercises.c:180:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  180 |   Stack* pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:180:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:181:26: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  181 |   char* elemento = first(cadena);
+      |                          ^~~~~~
+      |                          |
+      |                          char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:185:17: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                 ^~
+exercises.c:185:36: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                    ^~
+exercises.c:185:55: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                                       ^~
+exercises.c:193:21: error: comparison between pointer and integer [-Werror]
+  193 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                     ^~
+exercises.c:193:45: error: comparison between pointer and integer [-Werror]
+  193 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                                             ^~
+exercises.c:197:23: error: comparison between pointer and integer [-Werror]
+  197 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                       ^~
+exercises.c:197:47: error: comparison between pointer and integer [-Werror]
+  197 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                                               ^~
+exercises.c:201:25: error: comparison between pointer and integer [-Werror]
+  201 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                         ^~
+exercises.c:201:49: error: comparison between pointer and integer [-Werror]
+  201 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                                                 ^~
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:9: error: implicit declaration of function ‘parentesisBalanceados’; did you mean ‘test_parentesis_balanceados’? [-Werror=implicit-function-declaration]
+  217 |     if(!parentesisBalanceados(s)){
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         test_parentesis_balanceados
+In file included from test.c:5:
+exercises.c: In function ‘cadena_balanceada’:
+exercises.c:211:1: error: control reaches end of non-void function [-Werror=return-type]
+  211 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+92312f3
