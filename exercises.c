@@ -123,9 +123,9 @@ int parentesisBalanceados(char *cadena)
       contador--;
     }
     if (contador < 0){
-      return 0;
+      return 1;
     }
   }
-  return 1;    
+  return 0;    
 }
 
