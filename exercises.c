@@ -4,7 +4,7 @@
 #include <math.h>
 #include <ctype.h>
 #include "arraylist.h"
-#include "stack.h"
+#include "stack.h" // Include the header file where free_stack() is declared
 
 //#include "exercises.h"
 
@@ -143,7 +143,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
   if(isEmpty(P)) return 1;
 }*/
 
-/*int parentesisBalanceados(char *cadena) 
+int parentesisBalanceados(char *cadena) 
 {
   Stack* P = create_stack();
   char* c = cadena;
@@ -171,45 +171,19 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
       }
       c++; 
     }
-  if(isEmpty(P)) return 1;
-  else return 0; 
-}*/
-
-int parentesisBalanceados(char *cadena) 
-{
-  Stack* pila = create_stack();
-  char* elemento = first(cadena);
-
-  while(elemento != NULL)
+  if(isEmpty(P)) 
   {
-    if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
-
-    else
-    {
-      if(isEmpty(pila)) return 0;
-      else
-      {
-        char* elemento_pila = top(pila);
-        if(elemento == ')' && elemento_pila == '(') pop(pila);
-
-        else
-        {
-          if(elemento == ']' && elemento_pila == '[') pop(pila);
-
-          else
-          {
-            if(elemento == '}' && elemento_pila == '{') pop(pila);
-
-            else return 0;
-          }
-        }
-      }
-    }
-    elemento = next(cadena);
+    free_stack(P);
+    return 1;
   }
-  if(isEmpty(pila)) return 1;
-  return 0;
+  else
+  {
+    free_stack(P);
+    return 0;
+  }
 }
+
+
 
 
 

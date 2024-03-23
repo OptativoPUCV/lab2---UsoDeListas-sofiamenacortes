@@ -448,3 +448,15 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *
 cc1: all warnings being treated as errors
 Compilation failed
 bc58461
+Sat 23 Mar 2024 01:51:09 PM UTC: 
+ exercises.c | 46 ++++++++++------------------------------------
+ 1 file changed, 10 insertions(+), 36 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:176:5: error: implicit declaration of function ‘free_stack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  176 |     free_stack(P);
+      |     ^~~~~~~~~~
+      |     create_stack
+cc1: all warnings being treated as errors
+Compilation failed
+cc458c0
