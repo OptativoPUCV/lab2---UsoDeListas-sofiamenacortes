@@ -113,7 +113,24 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
-   return 0;
+int parentesisBalanceados(char *cadena) 
+{
+   int cont = 0;
+   Stack* P = create_stack();
+   for(int i = 0; i < strlen(cadena); i++)
+   {
+     if( *cadena == '(')
+      {
+        cont++;
+      }
+      else if (*cadena == ')')
+      {
+        cont--;
+      }
+     if (cont < 0)
+     {
+       return 0;
+     }
+   }
 }
 
