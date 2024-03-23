@@ -118,7 +118,7 @@ int parentesisBalanceados(char *cadena)
   Stack* P = create_stack();
   char* c = cadena;
 
-  while(c != NULL)
+  while(*c != '\0')
     {
       if(*c == '(' || *c == '[' || *c == '{') push(P, c);
       else
@@ -134,7 +134,7 @@ int parentesisBalanceados(char *cadena)
             else
             {
               if(*c == '}' && *c2 == '{') pop(P);
-              else return 1;
+              else return 0;
             }
           }
         }
