@@ -77,3 +77,24 @@ Sat 23 Mar 2024 12:48:19 PM UTC:
  tests:  7|1
 total_score: 60/70
 e89e887
+Sat 23 Mar 2024 01:09:42 PM UTC: 
+ exercises.c | 32 +++++++++++++++++++++++---------
+ 1 file changed, 23 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:143:8: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  143 |     if(isEmpty(P)) return 1;)
+      |        ^~~~~~~
+exercises.c:143:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  143 |     if(isEmpty(P)) return 1;)
+      |     ^~
+exercises.c:143:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  143 |     if(isEmpty(P)) return 1;)
+      |                             ^
+exercises.c:143:29: error: expected statement before ‘)’ token
+exercises.c:144:1: error: control reaches end of non-void function [-Werror=return-type]
+  144 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c157c44
