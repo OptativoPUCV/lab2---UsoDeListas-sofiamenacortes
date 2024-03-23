@@ -177,7 +177,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int cadena_balanceada(char* cadena)
 {
-  Stack* pila = createStack();
+  Stack* pila = create_stack();
   char* elemento = first(cadena);
 
   while(elemento != NULL)
@@ -205,9 +205,10 @@ int cadena_balanceada(char* cadena)
         }
       }
     }
-
+    elemento = next(cadena);
   }
   if(isEmpty(pila)) return 1;
+  return 0;
 }
 
 
