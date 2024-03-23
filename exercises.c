@@ -164,13 +164,13 @@ int parentesisBalanceados(char *cadena)
             else
             {
               if(*c == '}' && *c2 == '{') pop(P);
-              else return 0;
+              //else return 0;
             }
           }
         }
       }
-      c++; // Move to the next character in the input string
+      c++; 
     }
   if(isEmpty(P)) return 1;
-  else return 0; // Return 0 if there are unmatched opening parentheses
+  else return 0; 
 }
