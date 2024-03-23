@@ -141,5 +141,6 @@ int parentesisBalanceados(char *cadena)
       }
     }
   if(isEmpty(P)) return 1;
+  else return 0;  
 }
 
