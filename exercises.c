@@ -139,6 +139,7 @@ int parentesisBalanceados(char *cadena)
           }
         }
       }
+      c++;
     }
   int resultado = isEmpty(P);
   return resultado;
