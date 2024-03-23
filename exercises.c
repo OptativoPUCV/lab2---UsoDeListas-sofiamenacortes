@@ -141,8 +141,9 @@ int parentesisBalanceados(char *cadena)
       }
       c++;
     }
-  int resultado = isEmpty(P);
-  return resultado;
+  //int resultado = isEmpty(P);
+  //return resultado;
+  if(isEmpty(P)) return 1;
 }
 
 
