@@ -123,7 +123,7 @@ int parentesisBalanceados(char *cadena)
       if(*c == '(' || *c == '[' || *c == '{') push(P, c);
       else
       {
-        if(P == NULL) return 0;
+        if(isEmpty(P)) return 0;
         else
         {
           char* c2 = top(P);
