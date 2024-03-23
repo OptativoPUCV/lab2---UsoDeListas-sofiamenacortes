@@ -143,7 +143,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
   if(isEmpty(P)) return 1;
 }*/
 
-/*int parentesisBalanceados(char *cadena) 
+int parentesisBalanceados(char *cadena) 
 {
   Stack* P = create_stack();
   char* c = cadena;
@@ -173,32 +173,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
     }
   if(isEmpty(P)) return 1;
   else return 0; 
-}*/
-
-
-int parentesisBalanceados(char *cadena) {
-    Stack* P = create_stack();
-    char* c = cadena;
-
-    while (*c != '\0') {
-        if (*c == '(' || *c == '[' || *c == '{') {
-            push(P, &c);
-        } else {
-            if (isEmpty(P)) return 0;
-
-            char *c2 = pop(P);
-            if ((*c == ')' && *c2 != '(') ||
-                (*c == ']' && *c2 != '[') ||
-                (*c == '}' && *c2 != '{')) {
-                return 0;
-            }
-        }
-        c++; 
-    }
-
-    int resultado = isEmpty(P);
-    free_stack(P);
-    return resultado;
 }
+
+
+
 
 
