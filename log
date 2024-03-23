@@ -392,3 +392,59 @@ test.c:217:9: error: implicit declaration of function ‘parentesisBalanceados�
 cc1: all warnings being treated as errors
 Compilation failed
 d74bc98
+Sat 23 Mar 2024 01:35:15 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:181:26: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  181 |   char* elemento = first(cadena);
+      |                          ^~~~~~
+      |                          |
+      |                          char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:185:17: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                 ^~
+exercises.c:185:36: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                    ^~
+exercises.c:185:55: error: comparison between pointer and integer [-Werror]
+  185 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                                       ^~
+exercises.c:193:21: error: comparison between pointer and integer [-Werror]
+  193 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                     ^~
+exercises.c:193:45: error: comparison between pointer and integer [-Werror]
+  193 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                                             ^~
+exercises.c:197:23: error: comparison between pointer and integer [-Werror]
+  197 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                       ^~
+exercises.c:197:47: error: comparison between pointer and integer [-Werror]
+  197 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                                               ^~
+exercises.c:201:25: error: comparison between pointer and integer [-Werror]
+  201 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                         ^~
+exercises.c:201:49: error: comparison between pointer and integer [-Werror]
+  201 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                                                 ^~
+exercises.c:208:21: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  208 |     elemento = next(cadena);
+      |                     ^~~~~~
+      |                     |
+      |                     char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+bc58461
