@@ -113,7 +113,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-/*int parentesisBalanceados(char *cadena) 
+int parentesisBalanceados(char *cadena) 
 {
   Stack* P = create_stack();
   char* c = cadena;
@@ -139,11 +139,13 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
           }
         }
       }
+      c++;
     }
-  if(isEmpty(P)) return 1;
-}*/
+  int resultado = isEmpty(P);
+  return resultado;
+}
 
-int parentesisBalanceados(char *cadena) 
+/*int parentesisBalanceados(char *cadena) 
 {
   Stack* P = create_stack();
   char* c = cadena;
@@ -181,7 +183,7 @@ int parentesisBalanceados(char *cadena)
     free_stack(P);
     return 0;
   }
-}
+}*/
 
 
 
